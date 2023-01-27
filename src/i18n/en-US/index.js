@@ -2,6 +2,13 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
-}
+  menu: {
+    settings: "Settings",
+    users: "Users",
+    reports: "Reports",
+    customers: "Customers",
+    travels: "Travels",
+    timesheet: "Timesheet",
+    dashboard: "Dashboard",
+  },
+};

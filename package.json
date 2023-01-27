@@ -2,7 +2,7 @@
   "name": "devstation-ui",
   "version": "0.0.1",
   "description": "Devstation User Interface",
-  "productName": "Quasar App",
+  "productName": "Softenge",
   "author": "Rafael Eichstaedt <rafanofx@gmail.com>",
   "private": true,
   "scripts": {
