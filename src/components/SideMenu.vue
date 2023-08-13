@@ -6,7 +6,7 @@
       </q-toolbar>
       <LanguageSwitcher />
       <q-avatar style="width: 200px"
-        ><img alt="Softenge" src="~assets/logo.svg"
+        ><img alt="Divvy" src="~assets/logo.png"
       /></q-avatar>
     </q-toolbar>
   </q-header>

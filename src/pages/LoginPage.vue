@@ -1,44 +1,22 @@
 <template>
   <q-layout>
     <q-page-container>
-      <q-page class="flex flex-center background">
-        <div class="column">
-          <div class="row">
-            <q-card square bordered class="q-pa-lg shadow-1">
-              <img src="~assets/logo_escuro.svg" />
-              <q-card-section>
-                <q-form class="q-gutter-md" @submit.prevent="handleLogin">
-                  <q-input
-                    square
-                    filled
-                    clearable
-                    v-model="form.email"
-                    type="email"
-                    label="email"
-                  />
-                  <q-input
-                    square
-                    filled
-                    clearable
-                    v-model="form.password"
-                    type="password"
-                    label="password"
-                  />
-                </q-form>
-              </q-card-section>
-              <q-card-actions class="q-px-md" @click="handleLogin()">
-                <q-btn
-                  unelevated
-                  size="md"
-                  class="full-width bg-grey"
-                  label="Login"
-                  color="text-white"
-                />
-              </q-card-actions>
-            </q-card>
+      <div class="row login-page">
+        <div class="col">
+          <q-form class="q-gutter-md justify-center formulario" @submit.prevent="handleLogin">
+            <h4 class="titulo-login">Faça seu login</h4>
+            <q-input square filled clearable v-model="form.email" type="email" label="Email" />
+            <q-input square filled clearable v-model="form.password" type="password" label="Senha" />
+            <a href="" class="float-right esqueceu-senha"><small>Esqueceu sua senha?</small></a>
+            <q-btn label="Entrar" class="botao-entrar" type="submit" color="primary" />
+          </q-form>
+        </div>
+        <div v-if="this.$q.screen.width >= 1000" class="col background justify-center">
+          <div class="texto-background">
+            <h1 class="text-white">Área Administrativa</h1>
           </div>
         </div>
-      </q-page>
+      </div>
     </q-page-container>
   </q-layout>
 </template>
@@ -81,14 +59,58 @@ export default defineComponent({
 </script>
 
 <style>
-.q-card {
-  width: 360px;
+.formulario {
+  margin: 0 auto;
+  max-width: 80%;
+  top: 20%;
 }
+
+.titulo-login {
+  font-family: Source Sans Pro, sans-serif;
+  color: #111317;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.esqueceu-senha {
+  color: #9199ab;
+  font-family: Source Sans Pro, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.botao-entrar {
+  width: -webkit-fill-available;
+}
+
+.my-card {
+  width: 100%;
+}
+
+.login-page {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .background {
-  background-image: url("assets/login-bg.jpg");
-  background-repeat: no-repeat, repeat;
+  background-image: url("assets/login-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.texto-background h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 60px;
+  width: 396px !important;
+  margin-left: 100px;
+  margin-top: 60px;
 }
 </style>
->
+

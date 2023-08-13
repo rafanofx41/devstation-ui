@@ -29,7 +29,7 @@ export default {
       localeOptions: [
         { value: "pt-BR", label: "PT-BR" },
         { value: "en-US", label: "EN-US" },
-        { value: "es-Es", label: "ES-ES" },
+        { value: "es-ES", label: "ES-ES" },
       ],
     };
   },

@@ -144,8 +144,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Softenge`,
-        short_name: `Softenge`,
+        name: `Divvy`,
+        short_name: `Divvy`,
         description: `Devstation User Interface`,
         display: "standalone",
         orientation: "portrait",
